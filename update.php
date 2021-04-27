@@ -79,15 +79,17 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     // Retrieve individual field value
                     $title = $row["title"];
                     $course_code = $row["course_code"];                    
-                } else{
+                } else {
                     // URL doesn't contain valid id. Redirect to error page
                     header("location: error.php");
                     exit();
                 }
                 
-            } else{
+            } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
+        } else {
+            echo "Oops! Something went wrong. Please try again later.";
         }
         
         // Close statement
@@ -95,7 +97,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         
         // Close connection
         mysqli_close($conn);
-    }  else{
+    }  else {
         // URL doesn't contain id parameter. Redirect to error page
         header("location: error.php");
         exit();

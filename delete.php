@@ -16,9 +16,11 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             // Records deleted successfully. Redirect to landing page
             header("location: index.php");
             exit();
-        } else{
+        } else {
             echo "Oops! Something went wrong. Please try again later.";
         }
+    } else {
+        echo "Oops! Something went wrong. Please try again later.";
     }
      
     // Close statement
